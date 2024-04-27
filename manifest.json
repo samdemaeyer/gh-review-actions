@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "GitHub Code Review Helper",
+  "description": "Helper to mark files as reviewed, or remove them from the DOM",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "assets/images/helper-68.png"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content-script.js"]
+    }
+  ],
+  "icons": {
+    "48": "assets/images/helper-68.png",
+    "96": "assets/images/helper-68.png"
+  }
+}
